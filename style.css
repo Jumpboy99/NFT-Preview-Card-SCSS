@@ -1,0 +1,186 @@
+/* 
+            =====================
+            VARIABLES
+            =====================
+
+*/
+/* 
+            =====================
+            GENERAL SETTINGS
+            =====================
+
+*/
+.card .info, .card .additional-infos div .cyan,
+.card .additional-infos div .blue, .card .profile p {
+  color: #8bacda;
+  line-height: 1.6;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #0d192b;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  max-width: 380px;
+  padding: 2.5rem 1rem;
+}
+
+/* 
+            =====================
+            CARD
+            =====================
+
+*/
+.card {
+  padding: 1.2rem;
+  margin: 0 auto;
+  background-color: #14253d;
+  border-radius: 20px;
+}
+
+.card .card_img-container {
+  margin-bottom: 0.7rem;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.card .card_img-container .card_img {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-image: url("images/image-equilibrium.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.card .card_img-container .overlay {
+  background-color: rgba(0, 255, 247, 0.5);
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card .card_img-container .overlay:hover {
+  opacity: 1;
+}
+
+.card h2 {
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.card h2:hover {
+  color: #00fff7;
+}
+
+.card .info {
+  margin-bottom: 0.7rem;
+}
+
+.card .additional-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .additional-infos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card .additional-infos div .cyan,
+.card .additional-infos div .blue {
+  margin-left: .3rem;
+}
+
+.card .additional-infos div .cyan {
+  color: #00fff7;
+  font-weight: 600;
+}
+
+.card .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+}
+
+.card .profile::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  background-color: #2f415b;
+  width: 100%;
+  height: 1px;
+}
+
+.card .profile img {
+  width: 30px;
+  border-radius: 50%;
+  outline: 1px solid white;
+}
+
+.card .profile p {
+  margin-left: .6rem;
+}
+
+.card .profile span {
+  color: white;
+  cursor: pointer;
+}
+
+.card .profile span:hover {
+  color: #00fff7;
+}
+/*# sourceMappingURL=style.css.map */

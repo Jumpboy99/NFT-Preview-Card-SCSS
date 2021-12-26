@@ -1,0 +1,165 @@
+/* 
+            =====================
+            VARIABLES
+            =====================
+
+*/
+$softblue : hsl(215, 51%, 70%);
+$cyan : hsl(178, 100%, 50%);
+
+$neuMain : hsl(217, 54%, 11%);
+$neuCard : hsl(216, 50%, 16%);
+$neuLine : hsl(215, 32%, 27%);
+$neuWhite : hsl(0, 0%, 100%);
+
+$weightLight : 300;
+$weightReg : 400;
+$weightBold : 600;
+
+$baseMargin : .7rem;
+
+/* 
+            =====================
+            GENERAL SETTINGS
+            =====================
+
+*/
+
+%text{
+    color: $softblue;
+    line-height: 1.6;
+    font-size: 0.9em;
+    font-weight: $weightLight;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    background-color: $neuMain;
+    color: $neuWhite;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+  }
+
+.container{
+    width: 100%;
+    max-width: 380px;
+    padding: 2.5rem 1rem;
+}
+
+/* 
+            =====================
+            CARD
+            =====================
+
+*/
+
+.card{
+    padding: 1.2rem;
+    margin: 0 auto;
+    background-color: $neuCard;
+    border-radius: 20px;
+    .card_img-container{
+        margin-bottom: $baseMargin;
+        position: relative;
+        width: 100%;
+        height: 300px;
+        .card_img{
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            background-image: url('images/image-equilibrium.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            opacity: 1;
+        }
+        .overlay{            
+            background-color: hsla(178, 100%, 50%, .5);
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            opacity: 0;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    h2{
+        margin-bottom: $baseMargin;
+        cursor: pointer;
+        &:hover{
+            color: $cyan;
+        }
+    }
+    .info{
+        @extend %text;
+        margin-bottom: $baseMargin;
+    }
+
+    .additional-infos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div{
+            display: flex;
+            align-items: center;
+            margin-bottom: $baseMargin + .8rem;
+            .cyan,
+            .blue{
+                margin-left: .3rem;
+                @extend %text;
+            }
+            .cyan{
+                color: $cyan;
+                font-weight: $weightBold;
+            }
+        }
+    }
+
+    .profile{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        &::before{
+           content: '';
+           display: block;
+           position: absolute;
+           top: -15px;
+           background-color: $neuLine;
+           width: 100%;
+           height: 1px;
+        }
+        img{
+            width: 30px;
+            border-radius: 50%;
+            outline: 1px solid $neuWhite;
+        }
+        p{
+            @extend %text;
+            margin-left: .6rem;
+        }
+        span{
+            color: $neuWhite;
+            cursor: pointer;
+            &:hover{
+                color: $cyan;
+            }
+        }
+    }
+
+}
